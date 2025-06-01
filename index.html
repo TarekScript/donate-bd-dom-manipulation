@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate.com</title>
+    <title>DonateBD.com</title>
 
     <!-- favicon  -->
     <link rel="shortcut icon" href="assets/coin.png" type="image/x-icon">
@@ -38,7 +38,7 @@
         <!-- nav bar  -->
         <div class="px-2 md:px-14 lg:px-24 navbar bg-[#F9F7F3] shadow-sm pb-4 md:pb-8">
             <div class="navbar-start">
-                <a class="btn btn-ghost text-xl bg-[#B4F461]">Blog</a>
+                <a id="btn-blog" class="btn btn-ghost text-xl bg-[#B4F461]">Blog</a>
             </div>
             <div class="navbar-center grid grid-cols-1 md:grid-cols-2 justify-items-center lg:hidden">
                 <img class="w-8 h-8" src="assets/logo.png" alt="">
@@ -60,13 +60,14 @@
 
         <!-- toggle button  -->
         <div class="flex gap-2 justify-center my-10">
-            <button class="btn btn-lg btn-neutral btn-outline">Donate</button>
-            <button class="btn btn-lg btn-neutral btn-outline ">History</button>
+            <button id="btn-donate-page"
+                class="btn btn-lg btn-neutral btn-outline bg-[#B4F461] border-0">Donate</button>
+            <button id="btn-history-page" class="btn btn-lg btn-neutral btn-outline ">History</button>
         </div>
     </header>
     <main class="px-2 md:px-14 lg:px-24 my-6 md:my-16 z-0">
         <!-- donate setion  -->
-        <section>
+        <section id="donation-container">
             <!-- Donate for Flood at Noakhali section  -->
             <section
                 class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 border-[#1111111A] border-2 rounded-xl p-4 md:p-8 items-center">
@@ -143,7 +144,7 @@
         </section>
 
         <!-- history section  -->
-        <section id="history-container" class="my-10 space-y-6">
+        <section id="history-container" class="hidden my-10 space-y-6">
 
         </section>
 

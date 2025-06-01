@@ -4,7 +4,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     const myTotalAmmout = getTextFiledValue('my-total-ammount');
     const totalDonationAmmount = getTextFiledValue('total-ammount-noakhali');
     const donatedAmmount = getInputFiledValue('donated-ammount-noakhali');
-    if (isNaN(donatedAmmount)) {
+    if (isNaN(donatedAmmount) || donatedAmmount <= 0) {
         my_modal_3.showModal()
         return;
     }
@@ -36,7 +36,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     const myBalance = getTextFiledValue('my-total-ammount');
     const totalDonationAmmountFeni = getTextFiledValue('total-ammount-feni');
     const donatedAmmountFeni = getInputFiledValue('donated-ammount-feni');
-    if (isNaN(donatedAmmountFeni)) {
+    if (isNaN(donatedAmmountFeni) || donatedAmmountFeni <= 0) {
         my_modal_3.showModal()
         return;
     }
@@ -67,7 +67,7 @@ document.getElementById('btn-donate-quota-movement').addEventListener('click', f
     const myBalance = getTextFiledValue('my-total-ammount');
     const totalDonationAmmountQuota = getTextFiledValue('total-ammount-quota');
     const donatedAmmountQuota = getInputFiledValue('donated-ammount-quota');
-    if (isNaN(donatedAmmountQuota)) {
+    if (isNaN(donatedAmmountQuota) || donatedAmmountQuota <= 0) {
         my_modal_3.showModal()
         return;
     }
@@ -92,3 +92,20 @@ document.getElementById('btn-donate-quota-movement').addEventListener('click', f
     div.classList.add('border-2', 'border-gray-200', 'rounded-xl', 'p-4')
     historyContainer.appendChild(div);
 })
+
+// toggole 
+document.getElementById('btn-donate-page').addEventListener('click', function () {
+    toggleBetween('donation-container');
+    toogleBgColor('btn-donate-page');
+})
+
+document.getElementById('btn-history-page').addEventListener('click', function () {
+    toggleBetween('history-container');
+    toogleBgColor('btn-history-page')
+})
+
+// jump to blog page 
+document.getElementById('btn-blog').addEventListener('click', function () {
+    window.location.href = '/blog.html'
+})
+
